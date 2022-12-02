@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def get_lines(path: str) -> list[int]:
     with open(path) as file:
         return [int(l.strip()) if l.strip() else l.strip() for l in file.readlines()]
