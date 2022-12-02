@@ -1,8 +1,8 @@
 from pprint import pprint
 
 
-def get_lines() -> list[int]:
-    with open("input.txt") as file:
+def get_lines(path: str) -> list[int]:
+    with open(path) as file:
         return [int(l.strip()) if l.strip() else l.strip() for l in file.readlines()]
 
 
@@ -33,7 +33,7 @@ def get_sum_of_top_three_calories(elves: list[dict]) -> int:
 
 
 def main():
-    lines = get_lines()
+    lines = get_lines("input.txt")
     elves = get_elves_from_lines(lines)
     sorted_elves = sort_elves_by_calories(elves)
 
